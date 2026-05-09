@@ -1,86 +1,86 @@
-<script setup lang="ts">
-import { inject, Ref, watch } from 'vue'
-
-type Theme = 'light' | 'dark'
-
-interface Screenshot {
-  id: number
-  title: string
-  light: string
-  dark: string
-}
-
-const theme = inject<Ref<Theme>>('theme')!
-
-const screenshots: Screenshot[] = [
-  { id: 1, title: 'Dashboard', light: '/assets/screens/dashboard-light.png', dark: '/assets/screens/dashboard-dark.png' },
-  { id: 2, title: 'Statistiques', light: '/assets/screens/stats-light.png', dark: '/assets/screens/stats-dark.png' },
-  { id: 3, title: 'Engagements', light: '/assets/screens/engagements-light.png', dark: '/assets/screens/engagements-dark.png' },
-  { id: 4, title: 'Rappels', light: '/assets/screens/reminders-light.png', dark: '/assets/screens/reminders-dark.png' },
-  { id: 5, title: 'Vue quotidienne', light: '/assets/screens/daily-light.png', dark: '/assets/screens/daily-dark.png' },
-  { id: 6, title: 'Vue hebdomadaire', light: '/assets/screens/weekly-light.png', dark: '/assets/screens/weekly-dark.png' },
-  { id: 7, title: 'Paramètres', light: '/assets/screens/settings-light.png', dark: '/assets/screens/settings-dark.png' },
-  { id: 8, title: 'Notifications', light: '/assets/screens/notifications-light.png', dark: '/assets/screens/notifications-dark.png' },
-]
-
-watch(
-  theme,
-  (newTheme) => {
-    const opposite: Theme = newTheme === 'light' ? 'dark' : 'light'
-    screenshots.forEach((sc) => {
-      const img = new Image()
-      img.src = sc[opposite]
-    })
-  },
-  { immediate: true }
-)
-</script>
-
 <template>
-  <section class="px-6 md:px-12 py-16 md:py-20">
-    <h3 class="text-2xl md:text-3xl font-semibold text-gold mb-12 text-center">
-      Aperçu de l’application
-    </h3>
+  <section
+    id="screenshots"
+    class="py-32 px-6 max-w-6xl mx-auto"
+  >
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-16">
+      Aperçu de l'application
+    </h2>
 
-    <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8">
-      <figure v-for="sc in screenshots" :key="sc.id" class="flex flex-col items-center gap-3">
-        <transition name="fade">
-          <img
-            :key="theme.value + '-' + sc.id"
-            :src="theme.value === 'light' ? sc.light : sc.dark"
-            :alt="sc.title"
-            loading="lazy"
-            class="w-full rounded-2xl shadow-lg"
-          />
-        </transition>
-        <figcaption class="text-sm text-dark/80 dark:text-beige/70 text-center">{{ sc.title }}</figcaption>
-      </figure>
-    </div>
-
-    <div class="md:hidden flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4">
-      <figure v-for="sc in screenshots" :key="'m-' + sc.id" class="flex-shrink-0 w-64 snap-center flex flex-col items-center gap-3">
-        <transition name="fade">
-          <img
-            :key="'m-' + theme.value + '-' + sc.id"
-            :src="theme.value === 'light' ? sc.light : sc.dark"
-            :alt="sc.title"
-            loading="lazy"
-            class="w-full rounded-2xl shadow-lg"
-          />
-        </transition>
-        <figcaption class="text-xs text-dark/80 dark:text-beige/70 text-center">{{ sc.title }}</figcaption>
-      </figure>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+      <div
+        v-for="(shot, index) in activeScreenshots"
+        :key="index"
+        class="iphone-wrapper"
+        :style="{ '--glow-color': glowColors[index] }"
+      >
+        <img
+          :src="shot"
+          class="w-full rounded-4xl transition-all duration-500 hover:scale-[1.02]"
+          alt="Screenshot KeepMyWord"
+        />
+      </div>
     </div>
   </section>
 </template>
 
+<script setup>
+import { computed } from 'vue'
+import { useThemes } from '@/composables/useThemes'
+
+const { isDark } = useThemes()
+
+const screenshotsLight = [
+  '/screenshots/light-1.png',
+  '/screenshots/light-2.png',
+  '/screenshots/light-3.png',
+  '/screenshots/light-4.png',
+  '/screenshots/light-5.png',
+  '/screenshots/light-6.png',
+  '/screenshots/light-7.png',
+  '/screenshots/light-8.png'
+]
+
+const screenshotsDark = [
+  '/screenshots/dark-1.png',
+  '/screenshots/dark-2.png',
+  '/screenshots/dark-3.png',
+  '/screenshots/dark-4.png',
+  '/screenshots/dark-5.png',
+  '/screenshots/dark-6.png',
+  '/screenshots/dark-7.png',
+  '/screenshots/dark-8.png'
+]
+
+const glowColors = [
+  '#C9A84C',
+  '#A0845C',
+  '#F5E6C8',
+  '#C9A84C',
+  '#8B5E2A',
+  '#D4B483',
+  '#F5E6C8',
+  '#C9A84C',
+]
+
+const activeScreenshots = computed(() =>
+  isDark.value ? screenshotsDark : screenshotsLight
+)
+</script>
+
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
+.iphone-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+
+.iphone-wrapper img {
+  filter: drop-shadow(0 0 0px transparent);
+  transition: filter 0.5s ease, transform 0.3s ease;
+}
+
+.iphone-wrapper:hover img {
+  filter: drop-shadow(0 0 18px var(--glow-color));
 }
 </style>

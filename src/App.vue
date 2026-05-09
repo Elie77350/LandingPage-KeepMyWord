@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { ref, provide } from 'vue'
 
-import HeaderView from './HeaderView.vue'
-import HeroSection from './HeroSection.vue'
-import FeaturesSection from './FeaturesSection.vue'
-import ScreenshotsSection from './ScreenshotsSection.vue'
-import CitationSection from './CitationSection.vue'
-import CtaSection from './CtaSection.vue'
-import WarRoomSection from './WarRoomSection.vue'
-import FooterView from './FooterView.vue'
+import HeaderView from './components/HeaderView.vue'
+import HeroSection from './components/HeroSection.vue'
+import ScreenshotsSection from './components/ScreenshotsSection.vue'
+import CtaSection from './components/CtaSection.vue'
+import WarRoomSection from './components/WarRoomSection.vue'
+import FooterView from './components/FooterView.vue'
 
 type Theme = 'light' | 'dark'
 
@@ -25,12 +23,15 @@ provide('toggleTheme', toggleTheme)
 <template>
   <div :class="theme" class="min-h-screen transition-colors duration-500 bg-beige dark:bg-dark">
     <HeaderView />
-    <HeroSection />
-    <FeaturesSection />
-    <ScreenshotsSection />
-    <CitationSection />
-    <CtaSection />
-    <WarRoomSection />
+    
+    <main>
+      <HeroSection />
+      <ScreenshotsSection />
+      <CitationSection />
+      <CtaSection />
+      <WarRoomSection />
+    </main>
+
     <FooterView />
   </div>
 </template>
