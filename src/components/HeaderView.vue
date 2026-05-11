@@ -15,7 +15,7 @@
       </div>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-8 text-gray-700 dark:text-gray-300">
+      <nav class="hidden md:flex items-center gap-8 text-base text-gray-700 dark:text-gray-300">
         <a href="#features" class="hover:text-black dark:hover:text-white transition">Features</a>
         <a href="#screenshots" class="hover:text-black dark:hover:text-white transition">Screenshots</a>
         <a href="#war-room" class="hover:text-black dark:hover:text-white transition">War Room</a>
@@ -24,7 +24,7 @@
       <div class="flex items-center gap-4">
 
         <!-- CTA Desktop -->
-        <a href="#download" class="hidden md:inline-block bg-black text-white dark:bg-white dark:text-black px-5 py-2 rounded-lg font-medium hover:opacity-80 transition">Télécharger</a>
+        <a href="#download" class="hidden md:inline-block bg-black text-white dark:bg-white dark:text-black px-5 py-2 rounded-lg font-medium text-base hover:opacity-80 transition">Télécharger</a>
 
         <!-- Bouton Light/DarkMode -->
         <button
@@ -105,11 +105,11 @@
       </button>
 
       <!-- Mobile Navigation -->
-      <nav class="flex flex-col gap-4 text-lg text-gray-700 dark:text-gray-300">
+      <nav class="flex flex-col gap-4 text-xl text-gray-700 dark:text-gray-300">
         <a href="#features" @click="isMenuOpen = false">Features</a>
         <a href="#screenshots" @click="isMenuOpen = false">Screenshots</a>
         <a href="#war-room" @click="isMenuOpen = false">War Room</a>
-        <a href="#download" @click="isMenuOpen = false" class="mt-4 bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-lg text-center">Télécharger</a>
+        <a href="#download" @click="isMenuOpen = false" class="mt-4 bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-lg text-center text-base">Télécharger</a>
       </nav>
     </div>
   </transition>

@@ -8,6 +8,7 @@ export default defineConfig({
     vue(),
     tailwindcss(),
   ],
+  base: process.env.NODE_ENV === 'production' ? '/LandingPage-KeepMyWord/' : '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

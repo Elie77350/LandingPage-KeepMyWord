@@ -13,7 +13,7 @@
       </div>
 
       <!-- Navigation -->
-      <nav class="flex items-center gap-8 text-gray-600 dark:text-gray-400 text-sm">
+      <nav class="flex items-center gap-8 text-gray-600 dark:text-gray-400 text-lg">
         <a href="#features" class="hover:text-black dark:hover:text-white transition">
           Features
         </a>

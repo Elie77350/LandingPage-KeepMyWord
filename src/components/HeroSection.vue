@@ -1,11 +1,12 @@
 <template>
   <!-- INTRO -->
   <section
-    id="intro"
+    id="why"
     class="max-w-4xl mx-auto px-6 pt-48 pb-36 text-center"
+    style="scroll-margin-top: 80px;"
   >
     <h1 class="text-6xl md:text-7xl font-semibold text-gray-900 dark:text-white mb-10 tracking-tight">
-      Pourquoi KeepMyWord
+      Pourquoi KeepMyWord*
     </h1>
 
     <p class="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -18,10 +19,23 @@
       <strong>KeepMyWord est né de cette question.</strong>
     </p>
 
-    <blockquote class="text-3xl md:text-4xl italic text-gray-900 dark:text-white font-light mb-16">
-      « Ta parole est une lampe à mes pieds, et une lumière sur mon sentier. »<br />
-      <span class="text-gray-600 dark:text-gray-400 text-lg">Psaume 119:105</span>
+    <blockquote class="text-3xl md:text-4xl italic text-gray-900 dark:text-white font-light mb-6">
+      « Si quelqu'un m'aime, il gardera ma parole. »
     </blockquote>
+    <p class="text-gray-600 dark:text-gray-400 text-lg mb-6">Jean 14:23</p>
+
+    <p class="text-gray-700 dark:text-gray-300 text-xl leading-relaxed mb-16">
+      <em>Garder</em> — pas seulement lire. Pas seulement entendre.<br />
+      Graver la Parole dans son cœur jusqu'à ce qu'elle devienne une arme,<br />
+      un refuge, une lumière dans l'obscurité.<br /><br />
+      C'est la mission de KeepMyWord.
+    </p>
+
+    <!-- Note astérisque -->
+    <p class="text-sm text-gray-400 dark:text-gray-500 italic">
+      * KeepMyWord — « Garde ma Parole »
+    </p>
+
   </section>
 
   <!-- FEATURES -->
@@ -110,6 +124,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .feature-title {
@@ -118,6 +133,7 @@
   color: #111827;
   line-height: 1.3;
   letter-spacing: -0.01em;
+  text-align: center;
 }
 
 :global(.dark) .feature-title {
@@ -128,6 +144,7 @@
   font-size: 1rem;
   color: #6b7280;
   line-height: 1.75;
+  text-align: justify;
 }
 
 :global(.dark) .feature-desc {

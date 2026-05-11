@@ -1,9 +1,9 @@
 <template>
-  <section id="war-room" class="py-24 px-6 bg-gray-50 dark:bg-gray-900">
-    <div class="max-w-6xl mx-auto">
+  <section id="war-room" class="pt-12 pb-6 px-6 bg-gray-50 dark:bg-gray-900" style="scroll-margin-top: 80px;">
+    <div class="max-w-3xl mx-auto">
 
       <!-- Title -->
-      <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+      <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
         War Room — Vue d'ensemble stratégique
       </h2>
 
