@@ -7,7 +7,7 @@
       <!-- Logo + App Name -->
       <div class="flex items-center gap-3">
         <img
-          :src="isDark ? '/logos/logo-dark.png' : '/logos/logo-light.png'"
+          :src="isDark ? `${base}logos/logo-dark.png` : `${base}logos/logo-light.png`"
           alt="KeepMyWord Logo"
           class="w-8 h-8 transition-opacity duration-300"
         />
@@ -119,6 +119,7 @@
 import { ref } from 'vue'
 import { useThemes } from '@/composables/useThemes'
 
+const base = import.meta.env.BASE_URL
 const isMenuOpen = ref(false)
 const { isDark, toggleTheme } = useThemes()
 </script>

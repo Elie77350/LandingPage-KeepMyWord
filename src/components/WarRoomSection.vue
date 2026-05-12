@@ -11,7 +11,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div class="warroom-wrapper">
           <img
-            src="/screenshots/WarRoom-1.png"
+            :src="`${base}screenshots/WarRoom-1.png`"
             alt="WarRoom Screenshot 1"
             class="w-full transition-all duration-500 hover:scale-[1.02]"
           />
@@ -19,7 +19,7 @@
 
         <div class="warroom-wrapper">
           <img
-            src="/screenshots/WarRoom-2.png"
+            :src="`${base}screenshots/WarRoom-2.png`"
             alt="WarRoom Screenshot 2"
             class="w-full transition-all duration-500 hover:scale-[1.02]"
           />
@@ -31,6 +31,7 @@
 </template>
 
 <script setup>
+const base = import.meta.env.BASE_URL
 </script>
 
 <style scoped>

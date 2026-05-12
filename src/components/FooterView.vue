@@ -6,7 +6,7 @@
 
       <!-- Logo -->
       <div class="flex items-center gap-3">
-        <img src="/logos/logo-light.png" alt="KeepMyWord Logo" class="w-8 h-8" />
+        <img :src="`${base}logos/logo-light.png`" alt="KeepMyWord Logo" class="w-8 h-8" />
         <span class="text-xl font-semibold text-gray-900 dark:text-white">
           KeepMyWord
         </span>
@@ -40,6 +40,7 @@
 </template>
 
 <script setup>
+const base = import.meta.env.BASE_URL
 </script>
 
 <style scoped>

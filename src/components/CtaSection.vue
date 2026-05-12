@@ -29,9 +29,9 @@
     <!-- Decorative Phone -->
     <div class="flex justify-center">
       <img
-        src="/screenshots/light-2.png"
+        :src="`${base}screenshots/light-2.png`"
         alt="Mockup KeepMyWord"
-        class="w-65 md:w-85 drop-shadow-2xl rounded-3xl"
+        class="w-48 md:w-64 drop-shadow-2xl rounded-3xl"
       />
     </div>
 
@@ -39,6 +39,7 @@
 </template>
 
 <script setup>
+const base = import.meta.env.BASE_URL
 </script>
 
 <style scoped>

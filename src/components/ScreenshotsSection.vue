@@ -30,26 +30,28 @@ import { useThemes } from '@/composables/useThemes'
 
 const { isDark } = useThemes()
 
+const base = import.meta.env.BASE_URL
+
 const screenshotsLight = [
-  '/screenshots/light-1.png',
-  '/screenshots/light-2.png',
-  '/screenshots/light-3.png',
-  '/screenshots/light-4.png',
-  '/screenshots/light-5.png',
-  '/screenshots/light-6.png',
-  '/screenshots/light-7.png',
-  '/screenshots/light-8.png'
+  `${base}screenshots/light-1.png`,
+  `${base}screenshots/light-2.png`,
+  `${base}screenshots/light-3.png`,
+  `${base}screenshots/light-4.png`,
+  `${base}screenshots/light-5.png`,
+  `${base}screenshots/light-6.png`,
+  `${base}screenshots/light-7.png`,
+  `${base}screenshots/light-8.png`,
 ]
 
 const screenshotsDark = [
-  '/screenshots/dark-1.png',
-  '/screenshots/dark-2.png',
-  '/screenshots/dark-3.png',
-  '/screenshots/dark-4.png',
-  '/screenshots/dark-5.png',
-  '/screenshots/dark-6.png',
-  '/screenshots/dark-7.png',
-  '/screenshots/dark-8.png'
+  `${base}screenshots/dark-1.png`,
+  `${base}screenshots/dark-2.png`,
+  `${base}screenshots/dark-3.png`,
+  `${base}screenshots/dark-4.png`,
+  `${base}screenshots/dark-5.png`,
+  `${base}screenshots/dark-6.png`,
+  `${base}screenshots/dark-7.png`,
+  `${base}screenshots/dark-8.png`,
 ]
 
 const glowColors = [
