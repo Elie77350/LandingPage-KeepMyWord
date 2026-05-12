@@ -31,7 +31,7 @@
       <img
         :src="`${base}screenshots/light-2.png`"
         alt="Mockup KeepMyWord"
-        class="w-48 md:w-64 drop-shadow-2xl rounded-3xl"
+        class="w-64 md:w-80 drop-shadow-2xl rounded-3xl"
       />
     </div>
 
