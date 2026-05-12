@@ -3,7 +3,7 @@ name: Deploy KeepMyWord Landing Page
 on:
   push:
     branches:
-      - feature-landing-page-header
+      - main
 
 jobs:
   build-and-deploy:
