@@ -8,7 +8,7 @@ export default defineConfig({
     vue(),
     tailwindcss(),
   ],
-  base: '/LandingPage-KeepMyWord/',
+  base: '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
