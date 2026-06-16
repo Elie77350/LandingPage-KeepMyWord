@@ -24,7 +24,7 @@
       <div class="flex items-center gap-4">
 
         <!-- CTA Desktop -->
-        <a href="#download" class="hidden md:inline-block bg-black text-white dark:bg-white dark:text-black px-5 py-2 rounded-lg font-medium text-base hover:opacity-80 transition">Télécharger</a>
+        <a href="https://apps.apple.com/fr/app/keepmyword/id6760440935" target="_blank" rel="noopener noreferrer" class="hidden md:inline-block bg-black text-white dark:bg-white dark:text-black px-5 py-2 rounded-lg font-medium text-base hover:opacity-80 transition">Télécharger</a>
 
         <!-- Bouton Light/DarkMode -->
         <button
@@ -109,7 +109,7 @@
         <a href="#features" @click="isMenuOpen = false">Features</a>
         <a href="#screenshots" @click="isMenuOpen = false">Screenshots</a>
         <a href="#war-room" @click="isMenuOpen = false">War Room</a>
-        <a href="#download" @click="isMenuOpen = false" class="mt-4 bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-lg text-center text-base">Télécharger</a>
+        <a href="https://apps.apple.com/fr/app/keepmyword/id6760440935" target="_blank" rel="noopener noreferrer" @click="isMenuOpen = false" class="mt-4 bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-lg text-center text-base">Télécharger</a>
       </nav>
     </div>
   </transition>
