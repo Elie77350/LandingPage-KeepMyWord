@@ -5,7 +5,7 @@
     class="max-w-4xl mx-auto px-6 pt-48 pb-36 text-center"
     style="scroll-margin-top: 80px;"
   >
-    <h1 class="text-6xl md:text-7xl font-semibold text-gray-900 dark:text-white mb-10 tracking-tight">
+    <h1 class="text-4xl sm:text-5xl md:text-7xl font-semibold text-gray-900 dark:text-white mb-10 tracking-tight">
       Pourquoi KeepMyWord*
     </h1>
 
